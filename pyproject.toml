@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kwlib"
+version = "1.0.0"
+description = "跨平台选品的公开关键词库客户端 —— 零依赖、只读、查不到不等于没量"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Yunling Hanyin", email = "wangtingxian@yunlinghanyin.cn" }]
+keywords = ["keywords", "ecommerce", "cross-border", "ozon", "selection"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Office/Business",
+]
+
+[project.urls]
+Homepage = "https://yunlinghanyin.cn"
+Source = "https://github.com/Tingxian-Wang/-kwlib"
+
+[project.scripts]
+kwlib = "kwlib.cli:main"
+
+[tool.setuptools]
+packages = ["kwlib"]
