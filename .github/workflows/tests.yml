@@ -4,7 +4,9 @@ on: [push, pull_request]
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    # 钉死 24.04：ubuntu-latest 已经滚到 26.04，actions/setup-python@v5
+    # 在 26.04 上没有 3.9 的构建，会在装解释器这一步就挂（不是测试挂）。
+    runs-on: ubuntu-24.04
     strategy:
       matrix:
         python-version: ["3.9", "3.11", "3.12"]
